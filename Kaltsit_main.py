@@ -68,7 +68,9 @@ def swing_regime_detector(df_raw, k=2):
     # By using another shift(1) to avoid Look-Ahead Bias
     df['Swing_State'] = df['Dow_Regime'].shift(1)
     df['Swing_Duration'] = df['Dow_Duration'].shift(1)
-
+    
+    df['State_3']=df['Swing_State'] # 可视化接口 For Visualization
+    
     return df
 
 
